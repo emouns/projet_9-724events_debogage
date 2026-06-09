@@ -13,4 +13,4 @@ export const MONTHS = {
   12: "décembre",
 };
 
-export const getMonth = (date) => MONTHS[date.getMonth() + 1];  // correction du decalage index et clés Months 1 er bug //
+export const getMonth = (date) => MONTHS[date.getMonth() + 1];  // correction du decalage getMonth et clés Months 1er bug //
