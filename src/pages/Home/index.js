@@ -13,10 +13,10 @@ import Modal from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
 const Page = () => {
-  const { data } = useData();
+  const { data } = useData();        // j ai modifié last qui n'existait pas,  par data
   const last = data?.events          
-  ? [...data.events].sort(          // ...data.events evite de muter le [tableau] original avec sort
-    (a,b) => new Date(b.date) - new Date (a.date)
+  ? [...data.events].sort(          // ...data.events evite de modifier le [tableau] original avec sort
+    (a,b) => new Date(b.date) - new Date (a.date)  // date decroissante du + recent
   ) [0]
   :  null;
   return <>

@@ -29,7 +29,7 @@ export const DataProvider = ({ children }) => {
   useEffect(() => {    
     if (data) return;
     getData();
-  }, [getData]);        // tableau des dépendances de useEffect ajouter //
+  }, [getData]);        // getData ce lancera une fois stabiliser par useCallback //
   
   return (
     <DataContext.Provider
